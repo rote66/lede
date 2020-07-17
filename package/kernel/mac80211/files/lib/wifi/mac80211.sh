@@ -2,6 +2,9 @@
 
 append DRIVERS "mac80211"
 
+board=$(cat /tmp/sysinfo/board_name)
+boardname="${board##*,}"
+
 lookup_phy() {
 	[ -n "$phy" ] && {
 		[ -d /sys/class/ieee80211/$phy ] && return
@@ -181,7 +184,7 @@ detect_mac80211() {
 			set wireless.default_radio${devidx}.device=radio${devidx}
 			set wireless.default_radio${devidx}.network=lan
 			set wireless.default_radio${devidx}.mode=ap
-			set wireless.default_radio${devidx}.ssid=OpenWrt
+			set wireless.default_radio${devidx}.ssid=${boardname}
 			set wireless.default_radio${devidx}.encryption=none
 EOF
 		uci -q commit wireless
