@@ -1,9 +1,14 @@
 欢迎来到Lean的Openwrt源码仓库！
-=
 
 [English](./README_EN.md)
 
 如何编译自己需要的 OpenWrt 固件
+=======
+=
+中文：如何编译自己需要的 OpenWrt 固件
+
+TIP:此fork版已经对xr819进行了patch，适用于orangepi zero
+
 -
 注意：
 -
