@@ -79,7 +79,7 @@ define KernelPackage/sound-soc-sun4i-codec/description
   Kernel support for AllWinner built-in SoC audio sun4i-codec
 endef
 
-$(eval $(call KernelPackage,sound-soc-sunxi))
+$(eval $(call KernelPackage,sound-soc-sun4i-codec))
 
 define KernelPackage/sound-soc-sunxi-spdif
   TITLE:=Allwinner A10 SPDIF Support
